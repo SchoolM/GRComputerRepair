@@ -73,11 +73,95 @@ header a:hover{
 	font-weight:bold;
 }
 
+/* Showcase */
+#showcase{
+	min-height:400px;
+	background:url('../img/gonzalezrosadocomputerrepairfondo.png');
+	background-repeat: no-repeat;
+  	background-attachment: fixed;
+  	background-size: cover;
+	text-align:center;
+	color:#1d35ab;
+}
+
+#showcase h1{
+	margin-top:100px;
+	font-size:55px;
+	font-weight:bold,italic;
+	margin-bottom:10px;
+}
+
+#showcase p{
+	font-size:35px;
+	font-weight:bold,italic;
+}
+
+ 
+/* Newsletter */
+
+#newsletter{
+	padding:15px;
+	color:#000000;
+	background: #7F0709;
+}
+
+#newsletter h1{
+	float:left;
+	color:#ffffff;
+}
+
+#newsletter form{
+	float:right;
+	margin-top:15px;
+}
+
+#newsletter input[type="email"]{
+	padding:4px;
+	height:25px;
+	width:250px;
+}
+
+/* Boxes */
+
+#boxes{
+	margin-top:20px;
+}
+
+#boxes .box{
+	float:left;
+	text-align:center;
+	width:30%;
+	padding-left:2%;
+	
+}
+
+#boxes .box img{
+	width:275px;
+}
+
 footer{
 	padding:0.1%;
 	margin-top:0.1%;
 	color:#ffffff;
 	background-color:#9270f6;
+	text-align:center;
+}
+
+img{
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+#mission-col h1{
+	text-align:center;
+}
+
+#mission-col p{
+	text-align:center;
+}
+
+#main-col h1{
 	text-align:center;
 }
 
