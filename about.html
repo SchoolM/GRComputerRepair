@@ -1,72 +1,88 @@
 <!doctype html>
-<html>
- <head>
+<head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 	<meta name="Description" content="Affordable and professional computer repair">
 	<meta name="Keywords" content="computer repair, affordable computer repair, professional repair">
 	<meta name="author" content="Miguel A. González">
 	<meta name="email" content="scooby.doo840@hotmail.com">
-	<title>GR Computer Repair | About Us</title>
+	<title>GR Computer Repair</title>
 	<link rel="stylesheet" href="../css/style.css">
+	<link rel="icon" href="../Images/GR_Logo.ico">
 </head>
 
 <body>
-	<header>
-		<div class="container">
-			<div id="branding2">
-				<img src="GR Logo.png" style="max-width:100px;max-height:100px;">
-			</div>
-			<div id="branding">
-				<h2><span class="highlight">  GR</span> Computer Repair</h2>
-			</div>
-			<nav>
-				<ul>
-					<li class="current"><a href="index.html">Home</a></li>
-					<li><a href="about.html">About Us</a></li>
-					<li><a href="services.html">Services</a></li>
-					<li><a href="appointment.html">Appointment</a></li>
-					<li><a href="CSS Display Nivel 3.pdf">Class Presentation</a></li>
-					<li><a href="https://www.w3.org/TR/2020/CRD-css-display-3-20201218/">CSS3 Article</a></li>
-				</ul>
+		<!--Este es el encabezamiento de la pagina-->
+		<header>
+			<!--Barra de navegamiento-->
+			<nav class="nav">
+				<div class="nav-container">
+					<!--Logo de la compañia-->
+					
+					<h2 id="nav-brand"><div id="Logo">
+						<img src="../Images/GR Logo.png" style="max-width:140px;max-height:140px;">
+					</div> GR Computer Repair</h2>
+					<div class="nav-toggle" id="mobile-menu">
+						<span class="bar"></span> <span class="bar"></span>
+						<span class="bar"></span>
+					</div>
+					<ul class="nav-menu">
+						<li class="nav-item"><a href="index.html" class="current">Home</a></li>
+						<li class="nav-item"><a href="about.html" class="nav-links">About</a></li>
+						<li class="nav-item"><a href="services.html" class="nav-links">Services</a></li>
+						<li class="nav-item"><a href="appointment.html" class="nav-links">Contact</a></li>
+						<li class="nav-btn"><a href="/" class="button" class="nav-links">Sign Up</a></li>
+					</ul>
+				</div>
 			</nav>
-		</div>
+			<script src="../JavaScript/app.js"></script>
+		</header>
 		
-		<section id="showcase">
-			<div class="container">
+		<!--Showcase-->
+		<section class="showcase-aboutUs">
+			<div class="showcase-container">
 				<h1>Afordable Professional Computer Repair</h1>
 				<p>muneris minoris impendii</p>
 			</div>
 		</section>
-		
-		<section id="newsletter">
-			<div class="container">
-				<h1>Subscribe To our Newsletter</h1>
-				<form>
-					<input type="email" placeholder="Enter Email...">
-					<button type="submit" class="button_1">Subscribe</button>
-				
-				</form>
-			</div>
-		</section>
 
-	</header>
-	<section id="main">
+	<!--About Us-->
+	<section class="aboutUs">
 		<div class="container">
-			<article id="main-col">
-				<h1 class="page-title"> About Us</h1>
-				<p> We are a business with more than 20 years of experience, we have worked in Puerto Rico being one of the most economical businesses in the market, 
-					thus meeting the expectations of our clients by doing a good and economical job. </p>
-				<p>This business began working from office to office fixing computers for clients with needs while keeping the highest possible standard offered, 
-					trying to deliver services to does that do not have the facilitys avalible and permiting them to upgrade their systems.</p>
-				<p>Our motto "muneris minoris impendii" came to use as a mission to permit </p>
-			</article>
-		</div>	
+			<h2 class="aboutUs-Title">About us</h2>
+			<div class="aboutUs-wrapper">
+				<div class="aboutUs-Container">
+					<h2>SPECIALIZED IN BUILDING AND FIXING COMPUTERS SINCE 2007 AT THE BEST PRICES</h2>
+					<div class="line"></div>
+					<p class="aboutUs-p1">
+						We are a business with more than 14 years of experience, we have worked in Puerto Rico being one of the cheapest in the market, 
+						allowing us to meet the expectations of our customers by offering an excellent and affordable service.  
+					</p>
+					<p class="aboutUs-p2">
+						This business started office to office fixing and assembling computers for our clients maintaining the highest possible standard, 
+						trying to bring services to those who do not have the facilities available allowing them to improve their systems.
+					</p>
+					<ul class="about-point">
+						<li>
+							<span class="fa-li"></span>
+							Our experience fixing computers for over 14 Years is available to help you find your problem.
+						</li>
+						<li>
+							<span class="fa-li"></span>
+							 Our experience with building computers for over 14 Years is also available to help you get the best possible system that facilities your needs.
+						</li>
+						<li>
+							<span class="fa-li"></span>
+							As our company grows we promise to keep our standars the best in the market at the most affordable prices.
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
 	</section>
 	
 	<footer>
-		<p>GR Computer Repair, Copyright &copy; 2019</p>
+		<p>González Rosado Computer Repair, Copyright &copy; 2012</p>
 	</footer>
 </body>
-
 </html>

@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+ <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<meta name="Description" content="Affordable and professional computer repair">
+	<meta name="Keywords" content="computer repair, affordable computer repair, professional repair">
+	<meta name="author" content="Miguel A. González">
+	<meta name="email" content="scooby.doo840@hotmail.com">
+	<title>GR Computer Repair</title>
+	<link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="../Images/GR_Logo.ico">
+</head>
+
+<body>
+		<!--Este es el encabezamiento de la pagina-->
+		<header>
+			<!--Barra de navegamiento-->
+			<nav class="nav">
+				<div class="nav-container">
+					<!--Logo de la compañia-->
+					
+					<h2 id="nav-brand"><div id="Logo">
+						<img src="../Images/GR Logo.png" style="max-width:140px;max-height:140px;">
+					</div> GR Computer Repair</h2>
+					<div class="nav-toggle" id="mobile-menu">
+						<span class="bar"></span> <span class="bar"></span>
+						<span class="bar"></span>
+					</div>
+					<ul class="nav-menu">
+						<li class="nav-item"><a href="index.html" class="current">Home</a></li>
+						<li class="nav-item"><a href="about.html" class="nav-links">About</a></li>
+						<li class="nav-item"><a href="services.html" class="nav-links">Services</a></li>
+						<li class="nav-item"><a href="appointment.html" class="nav-links">Contact</a></li>
+						<li class="nav-btn"><a href="signup.html" class="button" class="nav-links">Sign Up</a></li>
+					</ul>
+				</div>
+			</nav>
+			<script src="../JavaScript/app.js"></script>
+		</header>
+
+    <section id="QuestionerforSignUp">
+              <form action="ProcessEmployee.php" method="post" id="Questioner2">
+                <div class="wrapper">
+                    <div class="content">
+                      <h1>Sign Up</h1>
+                      <p>This is a sign up area for employees.</p>
+                    </div>
+                  
+                    <div class="form">
+                  
+                      <div class="top-form">
+                        <div class="inner-form">
+                          <div class="label">Employee Id</div>
+                          <input type="text" id="employee_id" name="employee_id" placeholder="This will be Provided">
+                        </div>
+                        <div class="inner-form">
+                          <div class="label">Name</div>
+                          <input type="text" id="_name" name="_name" placeholder="Jhon">
+                        </div>
+                        <div class="inner-form">
+                          <div class="label">Middle Name</div>
+                          <input type="text" id="middle_name" name="middle_name" placeholder="B.">
+                        </div>
+                        <div class="inner-form">
+                          <div class="label">Last Name</div>
+                          <input type="text" id="last_name" name="last_name" placeholder="Macintire">
+                        </div>
+                        <div class="inner-form">
+                            <div class="label">Phone Number</div>
+                            <input type="text" id="phone_number" name="phone_number" placeholder="1234567890">
+                          </div>
+                        <div class="inner-form">
+                          <div class="label">Professional Email</div>
+                          <input type="text" id="professional_email" name="professional_email" placeholder="Example@gmail.com">
+                        </div>
+                  </div>
+                  
+                      <div class="middle-form">
+                        <div class="inner-form">
+                            <div class="label">Personal Email</div>
+                            <input type="text" id="personal_email" name="personal_email" placeholder="Example@gmail.com">
+                          </div>
+                          <div class="inner-form">
+                            <div class="label">Address</div>
+                            <input type="text" id="_address" name="_address" placeholder="street596 south ave.">
+                          </div>
+                          <div class="inner-form">
+                            <div class="label">Job</div>
+                            <input type="text" id="job" name="job" placeholder="Computer Scientist">
+                          </div>
+                      </div>
+                  
+                      <div class="bottom-form">
+                        <div class="inner-form">
+                          <div class="label">Pin</div>
+                          <input type="text" placeholder="1234" id="pin" name="pin">
+                        </div>
+                        <div class="inner-form">
+                            <div class="label">Pin confirmation</div>
+                            <input type="text" placeholder="1234" id="pin_confirmation" name="pin_confirmation">
+                          </div>
+                      </div>
+				<button type="submit" class="button_1">Submit</button>
+			</form>
+		</div>
+        <script type="text/javascript" language="javascript" src="verifyregister2.js"></script>
+	</section>
+    
+  <footer>
+		<p>González Rosado Computer Repair, Copyright &copy; 2012</p>
+	</footer>
+</body>
+</html>

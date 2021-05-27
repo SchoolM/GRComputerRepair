@@ -1,166 +1,470 @@
-body{
-	font: 15px/1.5 Arial,Helvetica, sans-serif;
-	padding:0;
-	margin:0;
-	background-color:#d3d3d3;
-}
 
 /* Global */
+
+/*Esto se aplica en toda la pagina**/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+	font-family: Arial,Helvetica,sans-serif;
+}
+
+body {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+/*para eliminar el underline**/
+a{
+    text-decoration: none;
+}
+
+h1{
+    font-size: 2.5rem; /*esto es una unidad relativa, 2 rem son 16px**/
+}
+h2{
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+h3{
+    font-weight: 600;
+}
+p{
+    font-weight: 300;
+}
+/*Define el margen superior**/
+.margin-top{
+    margin-top: 150px;
+}
+/*Define el margen inferior**/
+.margin-bottom{
+    margin-bottom: 100px;
+}
+
 .container{
-	width:80%;
-	margin:auto;
-	overflow:hidden;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+	overflow: hidden;
 }
 
-ul{
-	margin:0;
-	padding:0;
-}
-
-.button_1{
-	height:38px;
-	background-color:#9270f6;
-	border:0;
-	padding-left:20px;
-	padding-right:20px;
-	color:#ffffff;
-}
-
-/* Header **/
-header{
+/*Header*/
+.nav{
 	background:#961719;
-	color:#ffffff;
-	padding-top:30px;
-	min-height:70px;
-	border-bottom:#9270f6 5px solid;
+    height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: sticky;
+	top: 0;
+	z-index: 999;
+	border-bottom:5px solid#9270f6;
 }
 
-header a{
-	color:#ffffff;
-	text-decoration:non;
-	text-transform: uppercase;
-	font-size:16px;
+.nav-container{
+display: flex;
+justify-content: space-between;
+height: 80px;
+z-index: 1;
+width: 100%;
+max-width: 1300px;
+margin: 0 auto;
+padding: 0 50px;
 }
 
-header li{
-	float:left;
-	display:inline;
-	padding: 0 30px 0 30px;
+#nav-brand{
+	background-color: #ffff;
+	background-image: linear-gradient(to top, #9270f6 0%, #ffff 100%);
+	background-size: 100%;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-moz-text-fill-color: transparent;
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	font-size: 1.8rem;
 }
 
-
-
-header #branding{
-	float:left;
+.nav-menu{
+	display: flex;
+	align-items: center;
+	list-style: none;
+	text-align: center;
 }
 
-header #branding h2{
-	margin:0;
+.nav-links{
+	color: #ffff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	padding: 0 1rem;
+	height: 100%;
 }
 
-header nav{
-	float:right;
-	margin-top:10px;
+.nav-btn{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 1rem;
+	width: 100%;
 }
 
-header .highlight, header .current a{
-	color:#9270f6;
-	font-weight:bold;
+.button{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	padding: 10px 20px;
+	height: 100%;
+	width: 100%;
+	border: none;
+	outline: none;
+	border-radius: 4px;
+	background: #aa69f5;
+	color: #ffff;
 }
 
-header a:hover{
-	color:#00bfff;
-	font-weight:bold;
+/*Esto es para que el boton cambie de color cuando tenga el cursor encima**/
+.button:hover {
+	background: #661a8f;
+	transition: all 0.3s ease;;
 }
 
-/* Showcase */
-#showcase{
-	min-height:400px;
-	background:url('../img/gonzalezrosadocomputerrepairfondo.png');
-	background-repeat: no-repeat;
-  	background-attachment: fixed;
-  	background-size: cover;
-	text-align:center;
-	color:#1d35ab;
+/*Esto es para que al cursor cruzar sobre alguno de los elementos en el menu se vea un color violeta**/
+.nav-item :hover{
+    color: #8d6fe3;
+	transition: all 0.3s ease;
 }
 
-#showcase h1{
-	margin-top:100px;
-	font-size:55px;
-	font-weight:bold,italic;
-	margin-bottom:10px;
+.current{
+    background-color: #8a2be2;
+    border-radius: 20px; /*Esto es para hacer el ovalo alrededor del home**/
+    padding: 7px 25px;
+    color:#ffff
 }
 
-#showcase p{
-	font-size:35px;
-	font-weight:bold,italic;
+@media screen and (max-width: 960px) {
+	.navbar-container{
+		display: flex;
+		justify-content: space-between;
+		height: 80px;
+		z-index: 1;
+		width: 100%;
+		max-width: 1300px;
+		padding: 0;
+	}
+
+	.nav-menu{
+		display:grid;
+		grid-template-columns: auto;
+		margin: 0;
+		width:100%;
+		position: absolute;
+		top: -1000px;
+		opacity: 0;
+		transition: all 0.5s ease; /*esta trancicion comienza lento luego rapido y finaliza lento**/
+		height:50vh;
+		z-index: -1;
+		background: #961719;
+	}
+
+	.nav-menu.active{
+		background: #961719;
+		top: 100%;
+		opacity: 1;
+		transition: all 0.5s ease;
+		z-index: 99;
+		height: 50vh;
+		font-size: 1.6rem;
+	}
+
+	#nav-brand{
+		padding-left:25px;
+	}
+
+	.nav-toggle .bar{
+		display: block;
+		cursor: pointer;
+		width: 25px;
+		height: 3px;
+		margin: 5px auto;
+		transition: all 0.3s ease-in-out;
+		background: #fff;
+	}
+
+	.nav-item{
+		width:100%
+	}
+
+	.nav-links{
+		text-align: center;
+		padding: 2rem;
+		width: 100%;
+		display: table;
+	}
+
+	#mobile-menu{ 
+		position:absolute;
+		top: 20%;
+		right: 5%;
+		transform: translate(5%,20%);	
+	}
+
+	.nav-btn{
+		padding-bottom: 2rem;
+	}
+
+	.button{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 80%;
+		height: 80px;
+		margin: 0;
+	}
+
+	#mobile-menu.isactive .bar:nth-child(2){
+		opacity: 0;
+	}
+
+	#mobile-menu.isactive .bar:nth-child(1){
+		transform: translateY(8px) rotate(45deg);
+	}
+
+	#mobile-menu.isactive .bar:nth-child(3){
+		transform: translateY(-8px) rotate(-45deg);
+	}
 }
 
- 
-/* Newsletter */
-
-#newsletter{
-	padding:15px;
-	color:#000000;
-	background: #7F0709;
+/*Showcase*/
+.showcase{
+    height:calc(60vh - 40px); /*Esta unidad se basa en la altura de la ventana gráfica. Un valor de 1vh es igual al 1% de la altura de la ventana gráfica. **/
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../Images/gonzalezrosadocomputerrepairfondo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-bottom: 10px solid #961719;
 }
 
-#newsletter h1{
-	float:left;
-	color:#ffffff;
+.showcase-aboutUs{
+	height:calc(60vh - 40px); /*Esta unidad se basa en la altura de la ventana gráfica. Un valor de 1vh es igual al 1% de la altura de la ventana gráfica. **/
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../Images/PC.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-bottom: 10px solid #961719;
 }
 
-#newsletter form{
-	float:right;
-	margin-top:15px;
+.showcase-services{
+	height:calc(60vh - 40px); /*Esta unidad se basa en la altura de la ventana gráfica. Un valor de 1vh es igual al 1% de la altura de la ventana gráfica. **/
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../Images/Laptop.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-bottom: 10px solid #961719;
 }
 
-#newsletter input[type="email"]{
-	padding:4px;
-	height:25px;
-	width:250px;
+.showcase-container h1{
+    color: #ffff;
+    letter-spacing: 2px;
+}
+
+.showcase-container p{
+    color: #ffff;
+    margin:3%;
+}
+
+.showcase-container{
+    max-width:50%;
+    margin:auto;
+    text-align: center;
+    transform: translateY(25vh);
 }
 
 /* Boxes */
 
-#boxes{
-	margin-top:20px;
+.boxes{
+	margin-left: 8%;
+	margin-bottom: 1rem;
+
 }
 
-#boxes .box{
+.box{
 	float:left;
 	text-align:center;
 	width:30%;
 	padding-left:2%;
-	
 }
 
-#boxes .box img{
+.box img{
 	width:275px;
 }
 
+/*Mission*/
+
+.mission-col{
+	text-align: center;
+	margin-top: 2rem;
+	margin-bottom: 1.5rem;
+}
+
+/*Links*/
+
+.loi-container{
+	text-align: center;
+	margin-top: 2rem;
+	margin-bottom: 1.5rem;
+}
+
+/*About Us*/
+.aboutUs-Title{
+	margin-top: 2rem;
+	margin-bottom: 1rem;
+}
+
+.aboutUs .line{
+    width: 50%;
+    height: 6px;
+    margin-top: 1rem;
+	margin-bottom: 1rem;
+	margin-left: 25%;
+    background-color: #333;
+}
+
+.aboutUs-p1{
+	text-align: left;
+	margin-bottom: 0.3rem;
+}
+
+.aboutUs-p2{
+	text-align: left;
+	margin-bottom: 0.5rem;
+}
+
+/*Services*/
+.services{
+	margin-left: 7%;
+	margin-bottom: 1rem;
+}
+.services .page-title{
+	margin-top: 2rem;
+	margin-bottom: 1rem;
+	text-align: center;
+	margin-right: 7%;
+}
+
+/* Questioner for Apointment*/
+
+.wrapper {
+	margin: 0px auto 0;
+	width: 100%;
+	max-width: 680px;
+	padding: 20px;
+	box-sizing: border-box;
+  }
+  
+  /* content */
+  .content {
+	text-align: center;
+  }
+  
+  .content h1 {
+	letter-spacing: 1px;
+  }
+  
+  
+  /* form */
+  .form {
+	width: 100%;
+	margin: 25px 0;
+  }
+  
+  .top-form,
+  .middle-form,
+  .bottom-form {
+	width: 100%;
+	min-height: 65px;
+	margin: 10px 0;
+  }
+  
+  .form input[type="text"],
+  .form textarea {
+	border: 2px solid #c4ccc5;
+	background-color: #c4ccc5;
+	padding: 10px 5px;
+	outline: none;
+	border-radius: 2px;
+	width: 100%;
+	transition: all 0.2s ease;
+  }
+  
+  .form input:focus,
+  .form textarea:focus {
+	border-color: #4ca1af;
+	outline: none;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.0125),
+	  0 0 8px rgba(76, 161, 175, 0.5);
+  }
+  
+  .form .label {
+	margin-bottom: 5px;
+	text-transform: capitalize;
+  }
+  
+  /* top-contact */
+  .top-form .inner-form {
+	width: 30%;
+	float: left;
+	margin-right: 3%;
+  }
+  
+  .top-form .inner-form:last-child {
+	margin-right: 0;
+  }
+  
+  /* middle-form */
+  .middle-form {
+	clear: both;
+  }
+  
+  /* bottom-form */
+  .bottom-form textarea {
+	height: 80px;
+  }
+  
+  .btn {
+	background: #4ca1af;
+	width: 200px;
+	padding: 10px 0;
+	border-radius: 2px;
+	text-align: center;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	cursor: pointer;
+  }
+  
+  @media screen and (max-width: 460px) {
+	.top-form .inner-form {
+	  width: 100%;
+	  margin: 5px 0;
+	}
+	.top-form,
+	.middle-form,
+	.bottom-form {
+	  margin: 5px 0;
+	}
+	.form {
+	  margin-top: 10px;
+	}
+  }
+
 footer{
-	padding:0.1%;
-	margin-top:0.1%;
+	padding: 1rem;
 	color:#ffffff;
 	background-color:#9270f6;
-	text-align:center;
-}
-
-img{
-display: block;
-margin-left: auto;
-margin-right: auto;
-}
-
-#mission-col h1{
-	text-align:center;
-}
-
-#mission-col p{
-	text-align:center;
-}
-
-#main-col h1{
-	text-align:center;
+	text-align: center;
+	margin-top: auto;
 }

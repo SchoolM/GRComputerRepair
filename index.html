@@ -9,73 +9,99 @@
 	<meta name="email" content="scooby.doo840@hotmail.com">
 	<title>GR Computer Repair</title>
 	<link rel="stylesheet" href="../css/style.css">
+	<link rel="icon" href="../Images/GR_Logo.ico">
 </head>
 
 <body>
+	<!--Este es el encabezamiento de la pagina-->
 	<header>
-		<div class="container">
-			<div id="branding2">
-				<img src="GR Logo.png" style="max-width:100px;max-height:100px;">
-			</div>
-			<div id="branding">
-				<h2><span class="highlight">  GR</span> Computer Repair</h2>
-			</div>
-			<nav>
-				<ul>
-					<li class="current"><a href="index.html">Home</a></li>
-					<li><a href="about.html">About Us</a></li>
-					<li><a href="services.html">Services</a></li>
-					<li><a href="appointment.html">Appointment</a></li>
-					<li><a href="CSS Display Nivel 3.pdf">Class Presentation</a></li>
-					<li><a href="https://www.w3.org/TR/2020/CRD-css-display-3-20201218/">CSS3 Article</a></li>
+		<!--Barra de navegamiento-->
+		<nav class="nav">
+			<div class="nav-container">
+				<!--Logo de la compañia-->
+				
+				<h2 id="nav-brand"><div id="Logo">
+					<img src="../Images/GR Logo.png" style="max-width:140px;max-height:140px;">
+				</div> GR Computer Repair</h2>
+				<div class="nav-toggle" id="mobile-menu">
+					<span class="bar"></span> <span class="bar"></span>
+					<span class="bar"></span>
+				</div>
+				<ul class="nav-menu">
+					<li class="nav-item"><a href="index.html" class="current">Home</a></li>
+					<li class="nav-item"><a href="about.html" class="nav-links">About</a></li>
+					<li class="nav-item"><a href="services.html" class="nav-links">Services</a></li>
+					<li class="nav-item"><a href="appointment.html" class="nav-links">Contact</a></li>
+					<li class="nav-btn"><a href="signup.html" class="button" class="nav-links">Sign Up</a></li>
 				</ul>
-			</nav>
-		</div>
+			</div>
+		</nav>
+		<script src="../JavaScript/app.js"></script>
 	</header>
 	
-	<section id="showcase">
-		<div class="container">
+	<!--Showcase-->
+	<section class="showcase">
+		<div class="showcase-container">
 			<h1>Afordable Professional Computer Repair</h1>
 			<p>muneris minoris impendii</p>
 		</div>
 	</section>
-	<section id="newsletter">
-		<div class="container">
-			<h1>Subscribe To our Newsletter</h1>
-			<form>
-				<input type="email" placeholder="Enter Email...">
-				<button type="submit" class="button_1">Subscribe</button>
-			
-			</form>
-		</div>
-	</section>
-	
-	<section id="boxes">
-		<div class="container">
+	<!--Info abut our services resumed-->
+	<section class="boxes">
+		<div class="box-container">
 			<div class="box">
-				<img src="logodol.png" style="max-width:100%;max-height:100%;">
+				<img src="../Images/logodol.png" style="max-width:100%;max-height:100%;">
 				<h3>Low Prices</h3>
 				<p>While our competition may offer a low price to their standards, we offer even better prices for our high cuality professional services!</p>
 			</div>
 			<div class="box">
-				<img src="logocalc.png" style="max-width:100%;max-height:100%;">
+				<img src="../Images/logocalc.png" style="max-width:100%;max-height:100%;">
 				<h3>Low Cost Estimate</h3>
 				<p>We offer you a Cheap Estimate so that you are sure if you desire to fix the computer and offer you our amazing deals!</p>
 			</div>
 			<div class="box">
-				<img src="logopc.png" style="max-width:100%;max-height:100%;">
+				<img src="../Images/logopc.png" style="max-width:100%;max-height:100%;">
 				<h3>Computer Building</h3>
 				<p>If you have the desire of building your own pc and don't know how, don't worry we can do it for you by your specifications!</p>
 			</div>
 		</div>
-		<article id="mission-col">
-			<h1 class="page-title"> Our Mission</h1>
-			<p> To offer the best possible service in the lowest cost in the market. </p>
+	</section>
+	<!--Mission-->
+	<section class="mission">
+		<article class="mission-col">
+			<h2 class="page-title"> Our Mission</h2>
+			<p> "Muneris Minoris Impendii"</p>
+			<p> is to offer services at low cost with the highest standars possible</p>
 		</article>
 	</section>
-	
+	<!--Links de interes-->
+	<section class="loi">
+		<div class="loi-container">
+			<h2>Important Links</h2>
+			<ul>
+				<h3>Class Presentation</h3>
+				<li><a href="CSS Display Nivel 3.pdf">Class Presentation Document</a></li>
+				<li><a href="https://www.w3.org/TR/2020/CRD-css-display-3-20201218/">CSS3 Article</a></li>
+								
+				<h3>Programming Articles</h3>
+									
+				<li><a href="https://www.w3schools.com/css/css3_gradients.asp">CSS3 Gradient Backgrounds</a></li>
+				<li><a href="https://www.w3schools.com/cssref/css_units.asp">CSS Units</a></li>
+				<li><a href="https://www.w3schools.com/cssref/sel_hover.asp">CSS :hover Selector</a></li>
+				<li><a href="https://www.campusmvp.es/recursos/post/Que-diferencias-hay-entre-display-block-inline-e-inline-block-en-CSS.aspx">
+							CSS diferences between display:block and inline,inline-block
+					</a>
+				</li>
+
+				<h3>Employee List</h3>
+									
+				<li><a href="employeeList.php">Employees</a></li>
+			</ul>
+		</div>
+	</section>
+
 	<footer>
-		<p>GR Computer Repair, Copyright &copy; 2019</p>
+		<p>González Rosado Computer Repair, Copyright &copy; 2012</p>
 	</footer>
 </body>
 </html>
